@@ -1,16 +1,14 @@
 // Import orm.js and burder.js
 var ormConnection = require("../config/orm.js");
 
-var connection = require("../config/connection.js");
-
 // var orm =
 
-// var connection =
+// model file
+class Burger {
 
-
-
+}
 
 
 
 // Export file
-module.exports = burger;
+module.exports = Burger;
