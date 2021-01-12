@@ -3,6 +3,7 @@ const router = require("express").Router();
 
 var burger = require ("../models/burger.js")
 
+// homepage
 router.get("/", function(req, res) {
     burger.call(function(data) {
         var hbsObject = {
@@ -13,6 +14,7 @@ router.get("/", function(req, res) {
     res.render("index");
 });
 
+// insert new burger
 router.post("/api/burger", function(req, res) {
     burger.create([
         "burger", "devour"
@@ -22,5 +24,10 @@ router.post("/api/burger", function(req, res) {
         res.json({ id: result.insertId});
     });
 })
+
+// update burgers 
+
+
+// all burgers 
 
 module.exports = router;
