@@ -1,4 +1,4 @@
-var connection = require("./connection.js");
+var connection = require("../config/connection.js");
 
 // Object Relational Mapper (OLM)
 // ?? signs are for swapping out table or column
