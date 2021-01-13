@@ -13,16 +13,18 @@ var orm = {
             cb(result);
         });
     },
-    insertOne: function (burger_name) {
+    insertOne: function (burger_name, cb) {
         var queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (?, false)";
         connection.query(queryString, [burger_name], function (err, result) {
             if (err) throw err;
+            cb(result);
         })
     },
-    updateOne: function (id) {
+    updateOne: function (id, cb) {
         var queryString = "UPDATE burgers SET devoured = true WHERE id = ?";
         connection.query(queryString, [id], function (err, result) {
             if (err) throw err;
+            cb(result);
         })
     }
 };

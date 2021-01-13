@@ -12,30 +12,21 @@ router.get("/", function (req, res) {
             burgers: data
         };
         console.log(hbsObject)
-        res.render("index");
+        res.render("index", hbsObject);
     });
 });
 
 // insert new burger
 router.post("/api/burger", function (req, res) {
-    burger.create([
-        "burger", "devour"
-    ], [
-        req.body.burger_name, req.body.devour
-    ], function (result) {
+    console.log(req.body);
+    burger.create(req.body.burger_name, function (result) {
         res.json({ id: result.insertId });
     });
 })
 
 // update burgers 
 router.put("/api/burger/:id", function (req, res) {
-    var condition = "id = " + req.params.id;
-
-    console.log("devoured", devoured);
-
-    burger.update({
-        devoured: req.body.devoured
-    }, condition, function(result) {
+    burger.update(req.params.id, function(result) {
         if(result.changedRows == 0) {
             return res.status(404).end();
         } else {
