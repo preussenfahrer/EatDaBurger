@@ -4,7 +4,6 @@ var connection = require("../config/connection.js");
 // ?? signs are for swapping out table or column
 // ? signs are for swapping other values
 // Skeleton from Exercise 12, folder 13
-
 // object for all SQL statement functions
 var orm = {
     selectAll: function (tableInput, cb) {
@@ -26,7 +25,6 @@ var orm = {
             if (err) throw err;
         })
     }
-
 };
 
 // set up ORM for export
