@@ -1,28 +1,40 @@
 * {
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
 }
+
+h1 {
+  display: table;
+}
+
 li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  margin-left: auto;
+}
+
+.button {
+  display: block;
+}
+
 
 img {
-    padding-left: 20px;
-}  
-
+  display: block;
+  padding-left: 20px;
+}
